@@ -21,6 +21,7 @@ create table profile
   gender varchar2(255) NOT NULL,
   FOREIGN KEY(degree_id) REFERENCES degree(Id)
 );
+alter table profile drop primary key
 
 create table higher_degree
 (
@@ -100,7 +101,7 @@ create table event
   organiser_id Number(20)NOT NULL,
   FOREIGN KEY(organiser_id) REFERENCES user_new(Id)
 );
-
+desc event;
 create table post
 (
   Id NUMBER(20)primary key,
